@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RUTAS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5000">INICIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/uno">Ruta 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/dos">Ruta 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/tres">Ruta 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/cuatro">Ruta 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/cinco">Ruta 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/seis">Ruta 6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/siete">Ruta 7</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/ocho">Ruta 8</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <center>
+        <h1>Rutas de reparto optimizadas</h1>
+
+
+        <form action="{{url_for('post')}}" method="post">
+            <input type="text" name="camiones" placeholder="Nº de camiones de 1 a 8">
+            <input type="text" name="quedatos" placeholder="25 o 70 puntos de reparto">
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+            Optimizar</button>
+            
+        </form>
+        <h4>{{loquequieras}}</h4>
+
+        <div class="w-50 p-3" style="background-color: rgb(247, 250, 249);">
+            <p>Aqui podemos explicar un poco lo que hace el programa.
+
+            </p>
+        </div>
+        <br>
+        <iframe src="http://127.0.0.1:5000/mapa" width="900" height="900"></iframe>
+        <br>
+        <br>
+        <img src="static\grafico.png" alt="La cabeza" width="900" height="800">
+        <br>
+        <br>
+        <img src="static\cluster.png" alt="La cabeza" width="900" height="800">
+
+
+
+    </center>
+
+</body>
+
+</html>

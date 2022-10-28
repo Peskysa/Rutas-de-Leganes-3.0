@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Ruta tres</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5000">INICIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/uno">Ruta 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/dos">Ruta 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/tres">Ruta 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/cuatro">Ruta 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/cinco">Ruta 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/seis">Ruta 6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/siete">Ruta 7</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/ocho">Ruta 8</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="w-80 p-3">
+        <center>
+            <div class="p-3 mb-2 bg-info text-dark">
+                <h1> Mapa ruta 3</h1>
+                <h2>
+                    Esta ruta tiene una distancia total de {{dis}} km y se tardará {{tie}} minutos.
+                </h2>
+                <img src="static\terceraruta.jpg" alt="La cabeza" width="900" height="800">
+                <br>
+                <br>
+
+                <div class="w-75 p-3" style="background-color: rgb(238, 239, 241);">
+                    <p style="text-align: justify;"><span>{{rut}}</span></p>
+                </div>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
