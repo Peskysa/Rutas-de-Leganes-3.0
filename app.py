@@ -11,7 +11,7 @@ def create_app():
     @app.get('/<path:name>')
     def asset(name):return send_from_directory(ROOT/'public',name)
     @app.get('/health')
-    def health():return jsonify(status='ok',version='2.0.0')
+    def health():return jsonify(status='ok',version='2.0.1')
     @app.post('/api/plan')
     def calculate():
         origin=request.headers.get('Origin')

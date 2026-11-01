@@ -168,7 +168,7 @@ jobs:
           version="$(python -c 'import json; print(json.load(open("project.json"))["version"])')"
           tag="v$version"
           if [ "$GITHUB_REF_TYPE" = tag ] && [ "$GITHUB_REF_NAME" != "$tag" ]; then exit 1; fi
-          gh release create "$tag" artifacts/* --draft --target "$GITHUB_SHA" --title 'Rutas de Leganés 3 2.0.0' --notes-file docs/releases/v2.0.0.md
+          gh release create "$tag" artifacts/* --draft --target "$GITHUB_SHA" --title "Rutas-de-Leganes-3.0 $version" --notes-file "docs/releases/$tag.md"
           gh release edit "$tag" --draft=false --latest
   pages:
     needs: publish
