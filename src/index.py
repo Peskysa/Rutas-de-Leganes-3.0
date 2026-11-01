@@ -1,3 +1,7 @@
+# Archivo histórico GPL-2.0; véase LICENSE de esta carpeta.
+# La versión actual se ejecuta con python app.py desde la raíz.
+raise RuntimeError('Esta versión histórica requiere servicios externos y está retirada. Ejecuta python app.py desde la raíz del repositorio.')
+
 #-------------------------------------------------------------------------------#
 #--------------------------CALCULA RUTA ENTRE PUNTOS ---------------------------#
 #-------------------------------------------------------------------------------#

@@ -1,0 +1,21 @@
+{
+  "slug": "Rutas-de-Leganes-3.0",
+  "name": "Rutas de Leganés 3",
+  "description": "Planificador local de paradas por coordenadas, sin servicios de pago.",
+  "type": "aplicacion",
+  "prefix": "Rutas-de-Leganes-3.0",
+  "version": "2.0.0",
+  "author": "Marco Pescador",
+  "license": "AGPL-3.0-only",
+  "licenseScope": "Código y gráficos originales de la modernización; consultar NOTICE y THIRD_PARTY.md para material anterior.",
+  "visibility": "public",
+  "web": "https://peskysa.github.io/Rutas-de-Leganes-3.0/",
+  "modalities": [
+    "linux",
+    "windows",
+    "portable",
+    "web",
+    "android"
+  ],
+  "entry": "public/index.html"
+}

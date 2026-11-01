@@ -1,0 +1,95 @@
+{
+  "name": "rutas-de-leganes-3.0",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Planificador local de paradas por coordenadas, sin servicios de pago.",
+  "author": "Marco Pescador",
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Peskysa/Rutas-de-Leganes-3.0.git"
+  },
+  "scripts": {
+    "test": "node --test tests/core.test.cjs",
+    "build:web": "node scripts/build.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "start": "node scripts/serve.cjs",
+    "build:desktop": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3"
+  },
+  "main": "desktop/main.cjs",
+  "build": {
+    "appId": "io.github.peskysa.rutasdeleganes30",
+    "productName": "Rutas de Leganés 3",
+    "directories": {
+      "output": "dist/desktop",
+      "buildResources": "assets"
+    },
+    "files": [
+      "desktop/main.cjs",
+      "dist/web/**/*",
+      "assets/icon-512.png",
+      "project.json",
+      "LICENSE",
+      "NOTICE",
+      "THIRD_PARTY.md",
+      "licenses/**/*",
+      "docs/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon-512.png",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "Rutas-de-Leganes-3.0-Windows-Instalador.exe"
+    },
+    "portable": {
+      "artifactName": "Rutas-de-Leganes-3.0-Portable.exe"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon-512.png",
+      "category": "Utility",
+      "maintainer": "Marco Pescador",
+      "executableName": "rutas-de-leganes-3.0",
+      "artifactName": "Rutas-de-Leganes-3.0-Linux-Portable.${ext}"
+    },
+    "deb": {
+      "artifactName": "Rutas-de-Leganes-3.0-Linux-amd64.deb"
+    }
+  },
+  "packageManager": "pnpm@11.25.0"
+}
